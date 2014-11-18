@@ -1,0 +1,10 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+
+
+<ul>
+  <% @pizza_joints.each do |pizza| %>
+    <li><%= link_to pizza.name, edit_pizza_joint_path(pizza) %></li>
+  <% end %>
+</ul>

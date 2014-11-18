@@ -1,0 +1,9 @@
+<% @orders.each do |order| %>
+  <div>
+    <p><%= order.description %></p>
+    <%= form_for order do |f| %>
+      <%=f.hidden_field :made, value: true %>
+      <%=f.submit "Make This Order" %>
+    <% end %>
+  </div>
+<% end %>
